@@ -1,0 +1,343 @@
+:root {
+    --primary-color: #0BE100;
+    --secondary-color: #F818EF;
+    --accent-color: #DC06EA;
+    --purple-color: #8B5CF6;
+    --pink-color: #EC4899;
+    --text-color: #111111;
+    --background-color: #F5F5F5;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.font-heading {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.font-body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-primary_color {
+    color: var(--primary-color);
+}
+
+.bg-primary_color {
+    background-color: var(--primary-color);
+}
+
+.bg-text_color {
+    background-color: var(--text-color);
+}
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(248, 24, 239, 0.4), 0 4px 15px rgba(220, 6, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(248, 24, 239, 0.6), 0 8px 25px rgba(220, 6, 234, 0.5);
+    filter: brightness(1.1);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color), var(--purple-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.text-gradient-light {
+    background: linear-gradient(135deg, var(--primary-color), var(--pink-color), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+    background: linear-gradient(135deg, var(--purple-color), var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+
+.mentor-image {
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+
+#mentor:hover .mentor-image {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+.benefit-card, .bonus-card, .super-bonus-card, .how-it-works-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.benefit-card:hover, .bonus-card:hover, .super-bonus-card:hover, .how-it-works-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(248, 24, 239, 0.2), 0 10px 20px rgba(220, 6, 234, 0.15);
+    border-color: var(--secondary-color);
+}
+
+.benefit-card:hover {
+    background: linear-gradient(135deg, rgba(248, 24, 239, 0.05), rgba(220, 6, 234, 0.05));
+}
+
+.bonus-card:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(248, 24, 239, 0.1));
+}
+
+.testimonial-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .testimonial-slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonial-slide {
+        flex: 0 0 33.333%;
+    }
+}
+
+
+.testimonial-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: white;
+    border-radius: 9999px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(248, 24, 239, 0.3), 0 4px 12px rgba(220, 6, 234, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.testimonial-nav-button:hover {
+    background: linear-gradient(135deg, var(--purple-color), var(--pink-color));
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4), 0 8px 20px rgba(236, 72, 153, 0.3);
+}
+
+.guarantee-card {
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, 
+                linear-gradient(135deg, var(--secondary-color), var(--accent-color), var(--purple-color)) border-box;
+}
+
+.guarantee-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(248, 24, 239, 0.15), 0 25px 50px rgba(220, 6, 234, 0.1);
+    border-color: transparent;
+    background: linear-gradient(135deg, rgba(248, 24, 239, 0.02), rgba(220, 6, 234, 0.02)) padding-box,
+                linear-gradient(135deg, var(--secondary-color), var(--accent-color), var(--purple-color)) border-box;
+}
+
+.animated-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para os cards de especialistas */
+.specialist-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.specialist-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2), 0 10px 20px rgba(236, 72, 153, 0.15);
+    border-color: var(--purple-color);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05));
+}
+
+/* Estilos para o bloco do Bruno melhorado */
+.mentor-bio-enhanced {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1), rgba(255, 255, 255, 0.9));
+}
+
+/* Animações suaves para as imagens */
+.image-hover-effect {
+    transition: all 0.3s ease;
+}
+
+.image-hover-effect:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Estilos para o vídeo de depoimento */
+.video-testimonial {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.video-testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.video-testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(248, 24, 239, 0.1), rgba(220, 6, 234, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.video-testimonial:hover::before {
+    opacity: 1;
+}
+
+/* Melhorias nos cards de como funciona */
+.how-it-works-enhanced .how-it-works-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.how-it-works-enhanced .how-it-works-card:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 250, 252, 1));
+    border-color: var(--purple-color);
+}
+
+/* Estilos para as chamadas para ação intermediárias */
+.cta-intermediate {
+    background: linear-gradient(135deg, var(--text-color), rgba(17, 17, 17, 0.95));
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-intermediate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(248, 24, 239, 0.1), rgba(220, 6, 234, 0.1));
+    opacity: 0.5;
+}
+
+/* Animações de entrada suaves */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsividade melhorada */
+@media (max-width: 768px) {
+    .how-it-works-card {
+        padding: 1rem;
+    }
+    
+    .specialist-card {
+        padding: 1rem;
+    }
+    
+    .text-gradient {
+        font-size: 0.9em;
+    }
+}
+
+/* Estilos para destacar elementos importantes */
+.highlight-box {
+    background: linear-gradient(135deg, rgba(248, 24, 239, 0.05), rgba(220, 6, 234, 0.05));
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.highlight-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border-radius: inherit;
+    padding: 2px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+
+
+.specialist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
